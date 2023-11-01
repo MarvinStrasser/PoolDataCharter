@@ -33,7 +33,6 @@ while True:
             print(dt_string + " " + ph + " " + orp + " " + temp)
             cur.execute("INSERT INTO data (time, ph, orp, temp) VALUES (?, ?, ?, ?)", (dt_string, ph, orp, temp))
             conn.commit()
-#            cur.execute(query)
         except Exception as e:
             print("Error while decoding, reading or splitting data: ")
             print(e)
